@@ -1,17 +1,25 @@
 'use strict';
 
-// Убираем лишние пробелы + обрезаем строку до 30 символов
+// Вывести массив, перебрать его, вывести в консоль только те что начинаются на 2 или 4
+let arr = ["258", "5698", "789", "456", "425", "963", "279"];
 
-let string = "    Решение хард задачи 4 урока по обрезке строки    ";
-
-
-const checkString = function (str) {
-  if (typeof str !== 'string') {
-    console.log('Переданное значение не является строкой');
-  } else {
-    str = str.trim();
-    return str.slice(0, 30) + "...";
+arr.forEach((item) => {
+  if (item.startsWith('2') || item.startsWith('4')) {
+    console.log(item);
   }
-};
+});
 
-console.log(checkString(string));
+
+// вывести все простые чиса от 1 до 100 в столбик
+for (let i = 1; i <= 100; i++) {
+  let isPrime = true;
+  for (let j = 2; j < i; j++) { // проверить, делится ли число без остатка на j
+    if (i % j === 0) {
+      isPrime = false;
+      break;
+    }
+  }
+  if (isPrime) {
+    console.log("Делителями простого числа: " + i + " являются 1 и " + i);
+  }
+}
