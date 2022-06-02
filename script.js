@@ -10,6 +10,18 @@ arr.forEach((item) => {
 });
 
 
+// Перебрать массив с помощью метода Filtr
+let result = arr.filter(function (num) {
+  if (num.startsWith('2') || num.startsWith('4')) {
+    return true;
+  } else {
+    return false;
+  }
+});
+console.log(result.sort());
+
+
+
 // вывести все простые чиса от 1 до 100 в столбик
 for (let i = 1; i <= 100; i++) {
   let isPrime = true;
